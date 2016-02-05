@@ -21,6 +21,6 @@ get '/football' do
   json = Net::HTTP.get(uri)
   result = JSON.parse(json)
   p result
-  players = result['players'].map { |e| e['name'] }
+  players = result['players'].map { |e| e['name']  }
   players
 end
